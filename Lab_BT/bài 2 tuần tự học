@@ -1,0 +1,6 @@
+ten_khach_hang = " nGuYen VAn A "
+
+ten_khach_hang = ten_khach_hang.strip()
+ten_khach_hang = ten_khach_hang.title()
+
+print("Tên khách hàng sau khi chuẩn hóa:", ten_khach_hang)
