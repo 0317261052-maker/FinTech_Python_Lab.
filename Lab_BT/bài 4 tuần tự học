@@ -1,0 +1,9 @@
+print("Tính tổng số tiền tiết kiệm sau thời gian gửi.")
+
+so_tien_goc = float(10000000)
+lai_suat_nam = float(0.06)
+thoi_gian = int(2)
+
+tong_tien = so_tien_goc * (1 + lai_suat_nam * thoi_gian)
+
+print("Tổng số tiền nhận được:", tong_tien)
