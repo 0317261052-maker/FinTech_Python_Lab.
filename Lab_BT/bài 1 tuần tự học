@@ -1,0 +1,11 @@
+def phan_loai_khach_hang(diem_credit):
+    if 750 <= diem_credit <= 850:
+        return "Rủi ro Thấp - Duyệt tự động"
+    elif 600 <= diem_credit < 750:
+        return "Rủi ro Trung bình - Cần thẩm định"
+    else:
+        return "Rủi ro Cao - Từ chối cấp tín dụng"
+
+
+diem_credit = int(input("Nhập điểm tín dụng: "))
+print(phan_loai_khach_hang(diem_credit))
