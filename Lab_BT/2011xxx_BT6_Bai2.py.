@@ -1,0 +1,32 @@
+def credit_score(income, credit_history_years, has_bad_debt=False):
+    """Đánh giá và phân loại điểm tín dụng tự động dựa trên thu nhập,
+
+    lịch sử tín dụng và tình trạng nợ xấu.
+    """
+    if has_bad_debt:
+        return "Reject"
+    if income < 10000000 or credit_history_years < 1:
+        return "High Risk"
+    if income >= 20000000 and credit_history_years >= 3:
+        return "VIP"
+    return "Standard"
+
+
+# --- CHƯƠNG TRÌNH NHẬP DỮ LIỆU TỪ BÀN PHÍM ---
+print("=== HỆ THỐNG ĐÁNH GIÁ TÍN DỤNG ===")
+
+# 1. Nhập thu nhập
+income_input = float(input("Nhập thu nhập hàng tháng (VNĐ): "))
+
+# 2. Nhập số năm lịch sử tín dụng
+history_input = float(input("Nhập số năm lịch sử tín dụng: "))
+
+# 3. Hỏi về nợ xấu
+bad_debt_input = input("Có nợ xấu hay không? (có/không): ").strip().lower()
+has_bad_debt_bool = bad_debt_input == "có"
+
+# Gọi hàm tính toán sau khi đã nhập xong hết thông tin
+result = credit_score(income_input, history_input, has_bad_debt_bool)
+
+print("---------------------------------")
+print(f"=> Kết quả xếp loại tín dụng: {result}")
